@@ -5,13 +5,13 @@ Created on Mon Dec 23 09:52:05 2013
 @author: bayu imbang laksono
 """
 
-import sys
+#import sys
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 #from matplotlib.mlab import griddata
-from scipy.interpolate import griddata
-import scipy.interpolate as interpolate
-from scipy.interpolate import Rbf
+#from scipy.interpolate import griddata
+#import scipy.interpolate as interpolate
+#from scipy.interpolate import Rbf
 
 def weightall(xin,yin,zin,xref,yref,zref):
     lendata = len(xin)
@@ -52,9 +52,9 @@ def idw(xin,yin,zin,datain,xout,yout,zout):
     return dataout
                     
                     
-def ndmesh(*args):
-   args = map(np.asarray,args)
-   return np.broadcast_arrays(*[x[(slice(None),)+(None,)*i] for i, x in enumerate(args)])
+#def ndmesh(*args):
+#   args = map(np.asarray,args)
+#   return np.broadcast_arrays(*[x[(slice(None),)+(None,)*i] for i, x in #enumerate(args)])
    
 
 data = np.genfromtxt('res1.txt', dtype=[('x',float),('y',float),
