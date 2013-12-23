@@ -5,13 +5,6 @@ Created on Mon Dec 23 09:52:05 2013
 @author: bayu imbang laksono
 """
 
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Dec 21 05:20:45 2013
-
-@author: litbang
-"""
-
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
