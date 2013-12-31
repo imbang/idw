@@ -7,6 +7,7 @@ Created on Mon Dec 23 09:52:05 2013
 
 #import sys
 import numpy as np
+import scipy.io as sio
 #import matplotlib.pyplot as plt
 #from matplotlib.mlab import griddata
 #from scipy.interpolate import griddata
@@ -101,6 +102,7 @@ zgrd = np.arange(zgrd_min,zgrd_max,10)
 print len(xgrd),len(ygrd),len(zgrd)
 D = idw(x,y,z,da,xgrd,ygrd,zgrd)
 
+sio.savemat('Dall.mat',{'D':D})
 #X_irregular, Y_irregular, Z_irregular = (
 #    x[:, None, None], y[None, :, None], z[None, None, :])
 #    
