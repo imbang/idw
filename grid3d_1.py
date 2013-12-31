@@ -57,7 +57,7 @@ def idw(xin,yin,zin,datain,xout,yout,zout):
 #   return np.broadcast_arrays(*[x[(slice(None),)+(None,)*i] for i, x in #enumerate(args)])
    
 
-data = np.genfromtxt('res1.txt', dtype=[('x',float),('y',float),
+data = np.genfromtxt('resall.txt', dtype=[('x',float),('y',float),
                                            ('z',float),('rho',float),('rho1',float)],
                      comments='"', delimiter=' ')
 
@@ -88,12 +88,12 @@ zmax = z.max()
 da = data['rho']
 
 # DEFINISIKAN RUANG GRID
-xgrd_max = xmax + 50
-xgrd_min = xmin - 50
-ygrd_max = ymax + 50
-ygrd_min = ymin - 50
-zgrd_max = zmax + 10
-zgrd_min = zmin - 10
+xgrd_max = xmax + 10
+xgrd_min = xmin - 10
+ygrd_max = ymax + 10
+ygrd_min = ymin - 10
+zgrd_max = zmax + 5
+zgrd_min = zmin - 5
 
 xgrd = np.arange(xgrd_min,xgrd_max,10)
 ygrd = np.arange(ygrd_min,ygrd_max,10)
